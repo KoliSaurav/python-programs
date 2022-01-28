@@ -1,0 +1,16 @@
+* Python program to create,concatenate and print string and accessing sub-string from given string
+
+INPUT:-
+
+str1 = input("Enter the 1st string:")
+str2 = input("Enter the 2nd string:")
+print("1st string is:",str1)
+print("2nd string is:",str2)
+print("Concentration of two string:",str1 + str2)
+print("Sub-string of given string:",str1[0:])
+
+OUTPUT:-
+1st string is: saurav
+2nd string is: koli
+Concentration of two string: sauravkoli
+Sub-string of given string: saurav
