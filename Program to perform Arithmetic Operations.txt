@@ -1,0 +1,34 @@
+* Python program to perform different Arithmetic Operations
+
+INPUT:-
+
+a1 = int(input("Enter the 1st value:"))
+b1 = int(input("Enter the 2nd value:"))
+
+add = a1 + b1
+print("Addition of two numbers are:",add)
+
+sub = a1 - b1
+print("Subtraction of two numbers are:",sub)
+
+mul = a1 * b1
+print("Multiplication of two numbers are:",mul)
+
+div = a1 / b1
+print("Division of two numbers are:",div)
+
+mod = a1 % b1
+print("Modulus of two numbers are:",mod)
+
+expo = a1 ** b1
+print("Exponential of two numbers are:",expo)
+
+OUTPUT:-
+Enter the 1st value:15
+Enter the 2nd value:5
+Addition of two numbers are: 20
+Subtraction of two numbers are: 10
+Multiplication of two numbers are: 75
+Division of two numbers are: 3.0
+Modulus of two numbers are: 0
+Exponential of two numbers are: 759375
