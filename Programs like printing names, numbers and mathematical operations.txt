@@ -1,0 +1,20 @@
+* Python programs like printing names,numbers and mathematical operations
+
+INPUT:
+
+print("Hello")
+
+a="Hello RCPIT"
+print(a)
+
+print(1+2)
+
+a=1
+b=2
+print(a+b)
+
+OUTPUT:
+Hello
+Hello RCPIT
+3
+3
