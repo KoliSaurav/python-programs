@@ -1,0 +1,18 @@
+* Python program to sort the elements in the given array using numpy
+
+INPUT:
+
+import numpy as np
+nums = np.random.rand(10)
+print("Original array:")
+print(nums)
+print("\nSorted first 5 elements:")
+print(nums[np.argpartition(nums,range(5))])
+
+OUTPUT:
+Original array:
+[0.99173106 0.19263559 0.76614594 0.95416922 0.7616734 0.5231836
+0.98510789 0.17539999 0.38736478 0.79083413]
+Sorted first 5 elements:
+[0.17539999 0.19263559 0.38736478 0.5231836 0.7616734 0.95416922
+0.98510789 0.99173106 0.76614594 0.79083413]
