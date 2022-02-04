@@ -1,0 +1,51 @@
+* Python program to demonstrate different number Data Types
+
+INPUT:-
+
+x = "Hello Programming"
+print(x)
+print(type(x))
+
+x = 2+3j
+print(x)
+print(type(x))
+
+x = ("Python","is","Nice")
+print(x)
+print(type(x))
+
+x = ["Saurav","Ravindra","Koli"]
+print(x)
+print(type(x))
+
+x = {"Name":"Saurav","College":"RCPIT","Age":21}
+print(x)
+print(type(x))
+
+x = {"python","AI","ML"}
+print(x)
+print(type(x))
+
+x = True
+print(x)
+print(type(x))
+
+OUTPUT:-
+15
+<class 'int'>
+3.15
+<class 'float'>
+Hello Programming
+<class 'str'>
+(2+3j)
+<class 'complex'>
+('Python', 'is', 'Nice')
+<class 'tuple'>
+['Saurav', 'Ravindra', 'Koli']
+<class 'list'>
+{'Name': 'Saurav', 'College': 'RCPIT', 'Age': 21}
+<class 'dict'>
+{'ML', 'python', 'AI'}
+<class 'set'>
+True
+<class 'bool'>
