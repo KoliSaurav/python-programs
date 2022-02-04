@@ -1,0 +1,55 @@
+* Python program to convert temperature to and from Celsius to Fahrenheit
+
+Program 1:
+INPUT:
+
+print("Options are \n")
+print("1.Convert temperatures from Celsius to Fahrenheit \n")
+print("2.Convert temperatures from Fahrenheit to Celsius \n")
+opt=int(input("Choose any Option(1 or 2) : "))
+if opt == 1:
+ print("Convert temperatures from Celsius to Fahrenheit \n")
+ cel = float(input("Enter Temperature in Celsius: "))
+ fahr = (cel*9/5)+32
+ print("Temperature in Fahrenheit =",fahr)
+elif opt == 2:
+ print("Convert temperatures from Fahrenheit to Celsius \n")
+ fahr = float(input("Enter Temperature in Fahrenheit: "))
+ cel=(fahr-32)*5/9;
+ print("Temperature in Celsius =",cel)
+else:
+ print("Invalid Option")
+
+OUTPUT:
+Options are 
+1.Convert temperatures from Celsius to Fahrenheit 
+2.Convert temperatures from Fahrenheit to Celsius 
+Choose any Option(1 or 2) : 1
+Convert temperatures from Celsius to Fahrenheit 
+Enter Temperature in Celsius: 30
+Temperature in Fahrenheit = 86.0
+
+Program 2:
+INPUT:
+
+temp = input("Input the temperature you like to convert? (e.g., 45F, 102C 
+etc.) : ")
+degree = int(temp[:-1])
+i_convention = temp[-1]
+if i_convention.upper() == "C":
+ result = int(round((9 * degree) / 5 + 32))
+ o_convention = "Fahrenheit"
+elif i_convention.upper() == "F":
+RCPIT, Shirpur Department of Electrical Engineering
+Python Programming Language Page 36
+ result = int(round((degree - 32) * 5 / 9))
+ o_convention = "Celsius"
+else:
+ print("Input proper convention.")
+ quit()
+print("The temperature in", o_convention, "is", result, "degrees.")
+
+OUTPUT:
+Input the temperature you like to convert? (e.g., 45F, 102C etc.) : 45F
+The temperature in Celsius is 7 degrees.
+
