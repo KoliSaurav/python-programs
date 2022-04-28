@@ -1,0 +1,56 @@
+* Python program to find the roots of f(x) by Bisection Method.
+
+INPUT:
+
+def f(x):
+    return x**3-x-1
+    
+def bisection(x0,x1,e):
+    step = 1
+    print('\n\n*** BISECTION METHOD IMPLEMENTATION ***')
+    condition = True
+    while condition:
+        x2 = (x0 + x1)/2
+        print('Iteration-%d, x2 = %0.6f and f(x2) = %0.6f' %(step,x2,f(x2)))
+        
+        if f(x0) * f(x2) < 0:
+            x1 = x2
+        else:
+            x0 = x2
+            
+        step = step + 1
+        condition = abs(f(x2)) > e
+        
+    print('\nRequired root is: %0.8f' %x2)
+    
+x0 = float(input('First Guess: '))
+x1 = float(input('Second Guess: '))
+e = float(input('Tolerable Error: '))
+
+if f(x0) * f(x1) > 0.0:
+    print('Given guess values do not bracket the root.')
+    print('Try again with different guess values.')
+else:
+    bisection(x0,x1,e)
+
+OUTPUT:
+First Guess: 1
+Second Guess: 2
+Tolerable Error: 0.00005
+
+
+*** BISECTION METHOD IMPLEMENTATION ***
+Iteration-1, x2 = 1.500000 and f(x2) = 0.875000
+Iteration-2, x2 = 1.250000 and f(x2) = -0.296875
+Iteration-3, x2 = 1.375000 and f(x2) = 0.224609
+Iteration-4, x2 = 1.312500 and f(x2) = -0.051514
+Iteration-5, x2 = 1.343750 and f(x2) = 0.082611
+Iteration-6, x2 = 1.328125 and f(x2) = 0.014576
+Iteration-7, x2 = 1.320312 and f(x2) = -0.018711
+Iteration-8, x2 = 1.324219 and f(x2) = -0.002128
+Iteration-9, x2 = 1.326172 and f(x2) = 0.006209
+Iteration-10, x2 = 1.325195 and f(x2) = 0.002037
+Iteration-11, x2 = 1.324707 and f(x2) = -0.000047
+
+Required root is: 1.32470707
+    
