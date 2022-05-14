@@ -1,0 +1,52 @@
+* A python program to find the roots of f(x) by false position method or regula falsi method
+
+INPUT:
+def f(x):
+    return x**3 - 2*x - 5
+    
+def falsePosition(x0,x1,e,):
+    print('\n\n *** FALSE POSITION METHOD IMPLEMENTATION ***')
+    step = 1
+    condition = True
+    while condition:
+        x2 = x0 - (x1-x0)*f(x0)/(f(x1) - f(x0))
+        print('Iteration-%d, x2 = %0.6f and f(x2) = %0.6f' %(step,x2,f(x2)))
+        
+        if f(x0) * f(x2) < 0:
+            x1 = x2
+        else:
+            x0 = x2
+        step = step + 1
+        condition = abs(f(x2)) > e
+    print('\nRequired root is: %0.8f' %x2)
+    
+x0 = float(input('Enter First Guess: '))
+x1 = float(input('Enter Second Guess: '))
+e = float(input('Tolerable Erroe: '))
+
+if f(x0) * f(x1) > 0.0:
+    print('Given guess values do not bracket the root.')
+    print('Try again with different guess values.')
+else:
+    falsePosition(x0,x1,e,)
+
+OUTPUT:
+Enter First Guess: 2
+Enter Second Guess: 3
+Tolerable Error: 0.00001
+
+ *** FALSE POSITION METHOD ***
+Iteration-1, x2 = 2.058824 and f(x2) = -0.390800
+Iteration-2, x2 = 2.081264 and f(x2) = -0.147204
+Iteration-3, x2 = 2.089639 and f(x2) = -0.054677
+Iteration-4, x2 = 2.092740 and f(x2) = -0.020203
+Iteration-5, x2 = 2.093884 and f(x2) = -0.007451
+Iteration-6, x2 = 2.094305 and f(x2) = -0.002746
+Iteration-7, x2 = 2.094461 and f(x2) = -0.001012
+Iteration-8, x2 = 2.094518 and f(x2) = -0.000373
+Iteration-9, x2 = 2.094539 and f(x2) = -0.000137
+Iteration-10, x2 = 2.094547 and f(x2) = -0.000051
+Iteration-11, x2 = 2.094550 and f(x2) = -0.000019
+Iteration-12, x2 = 2.094551 and f(x2) = -0.000007
+
+Required root is: 2.09455087
